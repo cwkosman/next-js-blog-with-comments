@@ -2,16 +2,16 @@ import cn from 'classnames'
 import Link from 'next/link'
 import { urlForImage } from '../lib/sanity'
 
-export default function CoverImage({ title, url, imageObject, slug }) {
+export default function CoverImage({ title, imageObject, slug, width, height }) {
   const image = (
     <img
-      width={1240}
-      height={540}
+      width={width}
+      height={height}
       alt={`Cover Image for ${title}`}
       className={cn('shadow-small', {
         'transition-shadow duration-200 hover:shadow-medium': slug,
       })}
-      src={urlForImage(imageObject).width(1240).height(540).url()}
+      src={urlForImage(imageObject).width(width).height(height).url()}
     />
   )
 

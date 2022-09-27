@@ -19,6 +19,8 @@ export default function HeroPost({
           imageObject={coverImage}
           title={title}
           url={coverImage}
+          width={1240}
+          height={540}
         />
       </div>
       <div className="md:col-gap-16 lg:col-gap-8 mb-20 md:mb-28 md:grid md:grid-cols-2">
